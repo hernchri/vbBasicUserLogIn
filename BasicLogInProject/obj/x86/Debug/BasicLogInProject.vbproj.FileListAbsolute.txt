@@ -1,0 +1,11 @@
+D:\Personal Projects\BasicLogInProject\BasicLogInProject\bin\Debug\BasicLogInProject.exe
+D:\Personal Projects\BasicLogInProject\BasicLogInProject\bin\Debug\BasicLogInProject.pdb
+D:\Personal Projects\BasicLogInProject\BasicLogInProject\bin\Debug\BasicLogInProject.xml
+D:\Personal Projects\BasicLogInProject\BasicLogInProject\obj\x86\Debug\BasicLogInProject.frmRegistration.resources
+D:\Personal Projects\BasicLogInProject\BasicLogInProject\obj\x86\Debug\BasicLogInProject.frmUserLogIn.resources
+D:\Personal Projects\BasicLogInProject\BasicLogInProject\obj\x86\Debug\BasicLogInProject.Resources.resources
+D:\Personal Projects\BasicLogInProject\BasicLogInProject\obj\x86\Debug\BasicLogInProject.frmMDI.resources
+D:\Personal Projects\BasicLogInProject\BasicLogInProject\obj\x86\Debug\BasicLogInProject.vbproj.GenerateResource.Cache
+D:\Personal Projects\BasicLogInProject\BasicLogInProject\obj\x86\Debug\BasicLogInProject.exe
+D:\Personal Projects\BasicLogInProject\BasicLogInProject\obj\x86\Debug\BasicLogInProject.xml
+D:\Personal Projects\BasicLogInProject\BasicLogInProject\obj\x86\Debug\BasicLogInProject.pdb

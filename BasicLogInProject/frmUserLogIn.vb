@@ -1,8 +1,7 @@
 ﻿Public Class frmUserLogIn
 
-    Public _starter As clsStarter = Nothing
 
-    Public Sub New(ByRef starter As clsStarter)
+    Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -19,6 +18,10 @@
     End Sub
 
     Private Sub btnRegister_Click(sender As System.Object, e As System.EventArgs) Handles btnRegister.Click
-        Me.Close()
+        Dim registration As New frmRegistration
+        registration.TopMost = True
+        registration.Show()
+
+
     End Sub
 End Class

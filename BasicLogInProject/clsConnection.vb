@@ -2,7 +2,7 @@
 Imports System.Data.OleDb
 Imports System.IO
 
-Public Class clsStarter
+Public Class clsConnection
     Public Const LOCALFILE As String = "LocalDB.mdb"
     Public DBFileName As String = Application.StartupPath & "\" & LOCALFILE
     Public DBConn As OleDbConnection
