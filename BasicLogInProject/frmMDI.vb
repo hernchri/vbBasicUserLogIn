@@ -12,7 +12,6 @@ Public Class frmMDI
         _conn = New clsConnection
 
         Dim logIn As New frmUserLogIn()
-        logIn.TopMost = True
         logIn.Show()
     End Sub
 End Class

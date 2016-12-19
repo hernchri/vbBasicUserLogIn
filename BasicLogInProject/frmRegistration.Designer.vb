@@ -31,6 +31,8 @@ Partial Class frmRegistration
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblMessage = New System.Windows.Forms.Label()
+        Me.lblUserName = New System.Windows.Forms.Label()
+        Me.lblUserNameDisplay = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnRegister
@@ -106,17 +108,36 @@ Partial Class frmRegistration
         Me.lblMessage.AutoSize = True
         Me.lblMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMessage.ForeColor = System.Drawing.Color.Red
-        Me.lblMessage.Location = New System.Drawing.Point(47, 210)
+        Me.lblMessage.Location = New System.Drawing.Point(47, 229)
         Me.lblMessage.Name = "lblMessage"
         Me.lblMessage.Size = New System.Drawing.Size(203, 18)
         Me.lblMessage.TabIndex = 8
         Me.lblMessage.Text = "PLEASE FILL ALL FIELDS"
+        '
+        'lblUserName
+        '
+        Me.lblUserName.AutoSize = True
+        Me.lblUserName.Location = New System.Drawing.Point(47, 193)
+        Me.lblUserName.Name = "lblUserName"
+        Me.lblUserName.Size = New System.Drawing.Size(74, 13)
+        Me.lblUserName.TabIndex = 9
+        Me.lblUserName.Text = "USERNAME: "
+        '
+        'lblUserNameDisplay
+        '
+        Me.lblUserNameDisplay.AutoSize = True
+        Me.lblUserNameDisplay.Location = New System.Drawing.Point(128, 193)
+        Me.lblUserNameDisplay.Name = "lblUserNameDisplay"
+        Me.lblUserNameDisplay.Size = New System.Drawing.Size(0, 13)
+        Me.lblUserNameDisplay.TabIndex = 10
         '
         'frmRegistration
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(499, 306)
+        Me.Controls.Add(Me.lblUserNameDisplay)
+        Me.Controls.Add(Me.lblUserName)
         Me.Controls.Add(Me.lblMessage)
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.lblLastName)
@@ -141,4 +162,6 @@ Partial Class frmRegistration
     Friend WithEvents lblLastName As System.Windows.Forms.Label
     Friend WithEvents lblPassword As System.Windows.Forms.Label
     Friend WithEvents lblMessage As System.Windows.Forms.Label
+    Friend WithEvents lblUserName As System.Windows.Forms.Label
+    Friend WithEvents lblUserNameDisplay As System.Windows.Forms.Label
 End Class

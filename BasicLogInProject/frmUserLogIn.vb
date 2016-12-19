@@ -19,7 +19,6 @@
 
     Private Sub btnRegister_Click(sender As System.Object, e As System.EventArgs) Handles btnRegister.Click
         Dim registration As New frmRegistration
-        registration.TopMost = True
         registration.Show()
 
 

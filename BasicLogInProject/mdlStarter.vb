@@ -7,7 +7,7 @@
 
         MDI = New frmMDI
 
-        MDI.Show()
+        Application.Run(MDI)
 
 
     End Sub
