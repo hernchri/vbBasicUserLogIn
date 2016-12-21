@@ -6,7 +6,8 @@ Imports System.Text
 Public Class frmRegistration
 
     Private _strUserName As String = ""
-    Private Const ALLOWED_SPEC_CHARS As String = "!@#$%^&*():?><;/.,"
+    Private _strBadge As String = ""
+    'Private Const ALLOWED_SPEC_CHARS As String = "!@#$%^&*():?><;/.,qwertyuiopasdfghjklzxcvbnm"
 
     Public Sub New()
 
@@ -31,30 +32,30 @@ Public Class frmRegistration
 
         MDI._conn.mdbConn()
         Try
-            Dim strSQL As String = "INSERT INTO UsrInfo ( UserName, FirstName, LastName, CrtBadge, UserID, Password) " & _
-        "VALUES("
-
-            Dim sb As New StringBuilder
-            sb.Append("'").Append(_strUserName).Append("',")
-            sb.Append("'").Append(tbFirstName.Text).Append("',")
-            sb.Append("'").Append(tbLastName.Text).Append("',")
-            sb.Append(DateAndTime.Now.ToString("MM/dd/yyyy")).Append(",")
-            sb.Append("'").Append("0000000").Append("',")
-            sb.Append("'").Append(tbPassword.Text).Append("')")
-            strSQL &= sb.ToString
+            Dim strSQL As String = "INSERT INTO tblUSERINFO ( USRNAME, FNAME, LNAME, BADGE, PASSW, EMPDATE ) VALUES(?,?,?,?,?,?)"
+            'UserName, FirstName, LastName, CrtBadge, UserID, Password
 
             Dim cmd As New OleDbCommand(strSQL, MDI._conn.DBConn)
+            cmd.Parameters.Clear()
+            cmd.Parameters.Add("@USRNAME", OleDbType.VarChar, 100).Value() = _strUserName
+            cmd.Parameters.Add("@FNAME", OleDbType.VarChar, 100).Value() = tbFirstName.Text
+            cmd.Parameters.Add("@LNAME", OleDbType.VarChar, 100).Value() = tbLastName.Text
+            cmd.Parameters.Add("@BADGE", OleDbType.VarChar, 100).Value() = "000000"
+            cmd.Parameters.Add("@PASSW", OleDbType.VarChar, 100).Value() = tbPassword.Text
+            cmd.Parameters.Add("@EMPDATE", OleDbType.VarChar, 100).Value() = Date.Today
+
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.ToString)
-        Finally
             MDI._conn.mdbClose()
+            Exit Sub
         End Try
 
+        MDI._conn.mdbClose()
 
+        MsgBox("USER ACCOUNT CREATED: " & _strUserName)
 
-
-
+        Me.Close()
 
 
     End Sub
@@ -94,5 +95,9 @@ Public Class frmRegistration
 
     Private Sub btnCancel_Click(sender As System.Object, e As System.EventArgs) Handles btnCancel.Click
         Me.Close()
+    End Sub
+
+    Private Sub generateIDNumber()
+
     End Sub
 End Class
